@@ -1,0 +1,19 @@
+.MODEL SMAL
+.STACK 100H
+.DATA
+.CODE
+MAIN PROC
+    MOV CX, 50 ;LOOP 50 BAR GHURBE AND CX FIXED FOR LOOP
+    
+    LP:
+    MOV AH, 2
+    INT 21H 
+    
+    MOV DL, 7H
+    INT 21H
+  
+    LOOP LP
+    
+    
+    MAIN ENDP
+END MAIN
